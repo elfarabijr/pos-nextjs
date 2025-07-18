@@ -505,7 +505,7 @@ export default function UsersPage() {
                           <Switch
                             checked={user.status === "Active"}
                             onCheckedChange={() => toggleUserStatus(user)}
-                            size="sm"
+                            
                           />
                         </div>
                       </TableCell>

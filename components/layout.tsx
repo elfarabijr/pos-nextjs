@@ -51,7 +51,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <SessionManager>
       <div className="min-h-screen bg-gray-50">
-        <Sidebar />
+        <div className="hidden md:block">
+          <Sidebar />
+        </div>
 
         {/* Main Content */}
         <div className="md:pl-72">

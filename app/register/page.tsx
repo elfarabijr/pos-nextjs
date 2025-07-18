@@ -55,11 +55,11 @@ export default function RegisterPage() {
 
     try {
       const selectedRole = roles.find((r) => r.value === formData.role)
-      await signUp(formData.email, formData.password, {
+      await signUp(formData.email, formData.password, JSON.stringify({
         name: `${formData.firstName} ${formData.lastName}`,
         role: formData.role,
         permissions: selectedRole?.permissions || ["pos"],
-      })
+      }))
 
       router.push("/")
     } catch (err: any) {
